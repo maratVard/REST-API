@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.forrest.DTO.CatDTO;
 import org.example.forrest.entity.Cat;
 import org.example.forrest.repository.CatRepo;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -42,5 +43,17 @@ public class MainController {
             return "No such row";
         }
         return catRepo.save(cat).toString();
+    }
+
+    @Operation(summary = "Создает нового кота",
+            description = "Принимает объект Cat в формате JSON и сохраняет его в БД")
+    @PostMapping("/api/add")
+    public void addCat(@RequestBody CatDTO catDTO) {
+        log.info("New row: ", catRepo.save(
+                Cat.builder()
+                        .age(catDTO.getAge())
+                        .weight(catDTO.getWeight())
+                        .name(catDTO.getName())
+                        .build()));
     }
 }
