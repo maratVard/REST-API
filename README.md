@@ -4,22 +4,22 @@
 
 Технологический стек:
 
-Backend-Java 17 + Spring Boot 3.x
+-Backend-Java 17 + Spring Boot 3.x
 
-База данных-PostgreSQL, MongoDB
+-База данных-PostgreSQL, MongoDB
 
-Кэширование-Redis
+-Кэширование-Redis
 
-Контейнеризация-Docker
+-Контейнеризация-Docker
 
 
 
 Как начать работу:
 
-Клонируйте репозиторий: git clone https://github.com/maratVard/IprodyMicroservicesNew.git
+-Клонируйте репозиторий: git clone https://github.com/maratVard/IprodyMicroservicesNew.git
 
-Соберите все сервисы: mvn clean install
+-Соберите все сервисы: mvn clean install
 
-Запустите зависимости через Docker Compose: docker-compose up -d
+-Запустите зависимости через Docker Compose: docker-compose up -d
 
-Откройте API Gateway
+-Откройте API Gateway
